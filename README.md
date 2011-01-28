@@ -1,7 +1,7 @@
 node-exif
 =========
 
-With node-exif you can extract Exif metadata from images (JPEG). Exif is a
+With _node-exif_ you can extract Exif metadata from images (JPEG). Exif is a
 format used, for example, by digital cameras and scanners to save additional
 information about an image in the image file. This information can be the
 camera model, resolution, where the image was taken (GPS) or when it was taken.
@@ -21,7 +21,7 @@ If you don't have npm installed or don't want to use it:
 Usage
 -----
 
-Easy. Just require node-exif and throw an image at it. If node-exif is able to
+Easy. Just require _node-exif_ and throw an image at it. If _node-exif_ is able to
 extract data from the image it does so and returns an object with all the 
 information found, if an error occurs you will receive an error message. To
 prove that it really is easy please see the following example.
