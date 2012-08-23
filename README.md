@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/gomfunkel/node-exif.png)](http://travis-ci.org/gomfunkel/node-exif)
 node-exif
 =========
 
