@@ -1,8 +1,9 @@
 {
 	"name" : "exif",
-	"version" : "0.1.1",
+	"version" : "0.2.0",
 	"description" : "A node.js library to extract Exif metadata from images.",
 	"author" : "Daniel Leinich <leinich@gmx.net>",
+  "keywords" : ["exif", "image", "jpeg", "jpg", "makernotes", "gps"],
 	"main" : "./lib/exif",
 	"repository" : {
 		"type" : "git",
