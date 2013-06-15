@@ -243,5 +243,28 @@ describe("exif data extraction", function () {
 		});
 	});
 
+	it("should find EXIF data and not crash with byte typed makernote in bad-makernote.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/bad-makernote.jpg" }, function (error, exifData) {
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting bad-makernote.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeFalsy();
+			expect(result).toBeDefined();
+			expect(result.makernote).hasProperty("error");
+			expect(result).hasProperty("exif");
+			expect(result.exif).hasProperty("ExifImageWidth");
+			expect(result.exif.ExifImageWidth).toBe(1936);
+			expect(result.exif).hasProperty("ExifImageHeight");
+			expect(result.exif.ExifImageHeight).toBe(2592);
+		});
+	});
+
+
 
 });
