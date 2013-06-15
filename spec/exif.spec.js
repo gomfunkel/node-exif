@@ -175,4 +175,73 @@ describe("exif data extraction", function () {
 		});
 	});
 
+	it("should find EXIF data in crasher.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/crasher.jpg" }, function (error, exifData) {
+			if (error) {
+				console.log("Exif error: " + error.message);
+			}
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting crasher.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeFalsy();
+			expect(result).toBeDefined();
+			expect(result).hasProperty("image");
+			expect(result.image).hasProperty("Make");
+			expect(result.image.Make).toEqual("Canon");
+			expect(result).hasProperty("exif");
+			expect(result.exif).hasProperty("ExifImageWidth");
+			expect(result.exif.ExifImageWidth).toBe(400);
+			expect(result.exif).hasProperty("ExifImageHeight");
+			expect(result.exif.ExifImageHeight).toBe(600);
+		});
+	});
+
+	it("should find EXIF data in no-gpsinfo.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/no-gpsinfo.jpg" }, function (error, exifData) {
+			if (error) {
+				console.log("Exif error: " + error.message);
+			}
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting no-gpsinfo.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeFalsy();
+			expect(result).toBeDefined();
+			expect(result).hasProperty("image");
+			expect(result.image).hasProperty("Make");
+			expect(result.image.Make).toEqual("NIKON CORPORATION");
+			expect(result).hasProperty("exif");
+			expect(result.exif).hasProperty("FocalLength");
+			expect(result.exif.FocalLength).toBe(24);
+		});
+	});
+
+	it("should not find EXIF data in no-exif.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/no-exif.jpg" }, function (error, exifData) {
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting no-exif.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeDefined();
+			expect(result).toBeFalsy();
+		});
+	});
+
+
 });
