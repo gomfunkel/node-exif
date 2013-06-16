@@ -287,5 +287,23 @@ describe("exif data extraction", function () {
 		});
 	});
 
+	it("should find EXIF data and not crash in dodgy-exif.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/dodgy-exif.jpg" }, function (error, exifData) {
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting dodgy-exif.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeFalsy();
+			expect(result).toBeDefined();
+			// expect(result.makernote).hasProperty("error");
+			expect(result).hasProperty("exif");
+		});
+	});
+
 
 });
