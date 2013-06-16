@@ -265,6 +265,27 @@ describe("exif data extraction", function () {
 		});
 	});
 
+	it("should find EXIF data and not crash in endian-flipped-makernote.jpg", function () {
+		var result, errorResult;
+
+		new exif.ExifImage({ image: "testdata/endian-flipped-makernote.jpg" }, function (error, exifData) {
+			result = exifData;
+			errorResult = error;
+		});
+
+		waitsFor(function () {return result || errorResult;}, "extracting endian-flipped-makernote.jpg", 15000);
+
+		runs(function () {
+			expect(errorResult).toBeFalsy();
+			expect(result).toBeDefined();
+			// expect(result.makernote).hasProperty("error");
+			expect(result).hasProperty("exif");
+			expect(result.exif).hasProperty("ExifImageWidth");
+			expect(result.exif.ExifImageWidth).toBe(965);
+			expect(result.exif).hasProperty("ExifImageHeight");
+			expect(result.exif.ExifImageHeight).toBe(1113);
+		});
+	});
 
 
 });
