@@ -1,10 +1,15 @@
-node-exif
-=========
+# node-exif
 
 With _node-exif_ you can extract Exif metadata from images (JPEG). Exif is a format used, for example, by digital cameras and scanners to save additional information about an image in the image file. This information can be the camera model, resolution, where the image was taken (GPS) or when it was taken.
 
-Installation
-------------
+## Table of Contents
+
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [ToDo / Ideas](#todo--ideas)
+ * [License](#license)
+
+## Installation
 
 Installing using npm (node package manager):
 
@@ -15,8 +20,7 @@ If you don't have npm installed or don't want to use it:
     cd ~/.node_libraries
     git clone git://github.com/gomfunkel/node-exif.git exif
 
-Usage
------
+## Usage
 
 Easy. Just require _node-exif_ and throw an image at it. If _node-exif_ is able to extract data from the image it does so and returns an object with all the information found, if an error occurs you will receive an error message. To prove that it really is easy please see the following example.
 
@@ -128,12 +132,10 @@ The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i
 
 For more information about the Exif standard please refer to the specification found on [http://www.exif.org](http://www.exif.org). A comprehensive list of available Exif attributes and their meaning can be found on [http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/).
 
-ToDo / Ideas
-------------
+## ToDo / Ideas
 
 There are a lot of things still to be done and to be made better. If you have any special requests please open an issue with a feature request.
    
-License
--------
+## License
 
 _node-exif_ is licensed under the MIT License. (See LICENSE) 
