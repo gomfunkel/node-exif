@@ -8,5 +8,11 @@
 	"repository" : {
 		"type" : "git",
 		"url" : "http://github.com/gomfunkel/node-exif.git"
-	}
+	},
+  "devDependencies": {
+    "jasmine-node": "*"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib NODE_ENV=test node_modules/jasmine-node/bin/jasmine-node spec/exif.spec.js"
+  }
 }
