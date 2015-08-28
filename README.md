@@ -1,3 +1,9 @@
+# Looking for a Maintainer
+
+As many of you know and some of you already mentioned to me, this project is currently not properly maintained. I simply do not have the time to take care of it as much as I want to.
+
+If you are using _node-exif_ and are interested in being a maintainer, please drop me a line. I want to keep this project alive and thus hope some of you think alike and have a tad more time on their hands to take over.
+
 # node-exif
 
 With _node-exif_ you can extract Exif metadata from images (JPEG). Exif is a format used, for example, by digital cameras and scanners to save additional information about an image in the image file. This information can be the camera model, resolution, where the image was taken (GPS) or when it was taken.
