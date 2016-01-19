@@ -5,8 +5,10 @@ With _node-exif_ you can extract Exif metadata from images (JPEG). Exif is a for
 
 ## node-exif Command line
 
-Rodrigo Espinosa proposes a command line to use node-exif.
-Install his project [exif-cli](https://github.com/RodrigoEspinosa/exif-cli) by a npm installation and you will be able to execute :  
+Rodrigo Espinosa proposes a command line to use node-exif from a shell.
+
+Install his project [exif-cli](https://github.com/RodrigoEspinosa/exif-cli) by a npm installation and you will be able to execute :
+  
 `exif /path/to/FILE.JPG`
 
 
