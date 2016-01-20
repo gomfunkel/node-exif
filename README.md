@@ -1,4 +1,3 @@
-
 # node-exif
 
 With _node-exif_ you can extract Exif metadata from images (JPEG). Exif is a format used, for example, by digital cameras and scanners to save additional information about an image in the image file. This information can be the camera model, resolution, where the image was taken (GPS) or when it was taken.
@@ -19,7 +18,7 @@ Rodrigo Espinosa proposes the npm package [exif-cli](https://github.com/RodrigoE
 Installing using npm (node package manager):
 
     npm install exif
-    
+
 If you don't have npm installed or don't want to use it:
 
     cd ~/.node_libraries
@@ -31,7 +30,7 @@ Easy. Just require _node-exif_ and throw an image at it. If _node-exif_ is able 
 
 ```javascript
 var ExifImage = require('exif').ExifImage;
-    
+
 try {
     new ExifImage({ image : 'myImage.jpg' }, function (error, exifData) {
         if (error)
@@ -58,8 +57,8 @@ The data returned (`exifData` in the example above) is an object containing obje
 The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i.jpg) might thus look like this:
 
 ```
-{ 
-  image: { 
+{
+  image: {
     Make: 'FUJIFILM',
     Model: 'FinePix40i',
     Orientation: 1,
@@ -70,9 +69,9 @@ The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i
     ModifyDate: '2000:08:04 18:22:57',
     YCbCrPositioning: 2,
     Copyright: '          ',
-    ExifOffset: 250 
+    ExifOffset: 250
   },
-  thumbnail: { 
+  thumbnail: {
     Compression: 6,
     Orientation: 1,
     XResolution: 72,
@@ -80,9 +79,9 @@ The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i
     ResolutionUnit: 2,
     ThumbnailOffset: 1074,
     ThumbnailLength: 8691,
-    YCbCrPositioning: 2 
+    YCbCrPositioning: 2
   },
-  exif: { 
+  exif: {
     FNumber: 2.8,
     ExposureProgram: 2,
     ISO: 200,
@@ -110,14 +109,14 @@ The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i
     FocalPlaneResolutionUnit: 3,
     SensingMethod: 2,
     FileSource: <Buffer 03>,
-    SceneType: <Buffer 01> 
+    SceneType: <Buffer 01>
   },
   gps: {},
   interoperability: {
-    InteropIndex: 'R98', 
+    InteropIndex: 'R98',
     InteropVersion: <Buffer 30 31 30 30>
   },
-  makernote: { 
+  makernote: {
     Version: <Buffer 30 31 33 30>,
     Quality: 'NORMAL ',
     Sharpness: 3,
@@ -130,8 +129,8 @@ The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i
     AutoBracketing: 0,
     BlurWarning: 0,
     FocusWarning: 0,
-    ExposureWarning: 0 
-  } 
+    ExposureWarning: 0
+  }
 }
 ```
 
@@ -140,7 +139,7 @@ For more information about the Exif standard please refer to the specification f
 ## ToDo / Ideas
 
 There are a lot of things still to be done and to be made better. If you have any special requests please open an issue with a feature request.
-   
+
 ## License
 
-_node-exif_ is licensed under the MIT License. (See LICENSE) 
+_node-exif_ is licensed under the MIT License. (See LICENSE)
