@@ -40,7 +40,7 @@ describe('node-exif API', function() {
     });
   });
 
-  it('test loadImage (buffer)', function(done) {
+  it('test loadImage (filename)', function(done) {
 
     var ExifImage = require('..').ExifImage;
     
@@ -57,7 +57,7 @@ describe('node-exif API', function() {
     });
   });
 
-  it('test loadImage (filename)', function(done) {
+  it('test loadImage (buffer)', function(done) {
 
     var ExifImage = require('..').ExifImage;
     
