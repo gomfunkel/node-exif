@@ -54,7 +54,7 @@ The data returned (`exifData` in the example above) is an object containing obje
  * `interoperability` for interoperability information (Interoperability IFD)
  * `makernote` for vendor specific Exif information (Makernotes)
 
-The ouput for an [example image](http://www.exif.org/samples/fujifilm-finepix40i.jpg) might thus look like this:
+The ouput for an [example image](http://dev.exiv2.org/attachments/download/487/fujifilm-finepix40i.jpg) might thus look like this:
 
 ```
 {
