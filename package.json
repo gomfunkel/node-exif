@@ -10,7 +10,8 @@
     "url" : "http://github.com/gomfunkel/node-exif.git"
   },
   "dependencies": {
-    "debug": "^2.2"
+    "debug": "^2.2",
+    "is-buffer": "^2.0.2"
   },
   "devDependencies": {
     "mocha": "^2.4"
