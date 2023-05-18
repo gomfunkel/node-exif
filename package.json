@@ -2,9 +2,10 @@
   "name": "node-exif",
   "version": "0.7.0",
   "description": "A node.js library to extract Exif metadata from images.",
-  "author" : [
-    "Daniel Leinich <leinich@gmx.net>", 
-    "Olivier Oeuillot <olivier.oeuillot@gmail.com>" 
+  "author" : "Daniel Leinich <leinich@gmx.net>",
+  "contributors": [
+    "Olivier Oeuillot <olivier.oeuillot@gmail.com>",
+    "Ruurd Bijlsma <ruurd@bijlsma.dev"
   ],
   "type": "module",
   "keywords": [
