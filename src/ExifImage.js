@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-import { assert } from 'chai'
+import assert from 'assert'
 import fs from 'fs/promises'
 import dbg from 'debug'
 import BufferExtender from "./Buffer.js" // bad idea

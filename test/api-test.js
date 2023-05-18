@@ -3,7 +3,7 @@ import fs from 'fs/promises'
 import Path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import ExifImage from '../lib/exif/ExifImage.js'
+import ExifImage from '../src/ExifImage.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
