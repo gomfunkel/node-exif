@@ -29,15 +29,11 @@ If you don't have npm installed or don't want to use it:
 Easy. Just require _node-exif_ and throw an image at it. If _node-exif_ is able to extract data from the image it does so and returns an object with all the information found, if an error occurs you will receive an error message. To prove that it really is easy please see the following example.
 
 ```javascript
-var ExifImage = require('exif').ExifImage;
+import ExifImage from 'exif'
 
 try {
-    new ExifImage({ image : 'myImage.jpg' }, function (error, exifData) {
-        if (error)
-            console.log('Error: '+error.message);
-        else
-            console.log(exifData); // Do something with your data!
-    });
+    const exifData = await ExifImage({ image : 'myImage.jpg' })
+    console.log(exifData); // Do something with your data!
 } catch (error) {
     console.log('Error: ' + error.message);
 }
