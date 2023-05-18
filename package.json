@@ -1,21 +1,35 @@
 {
-  "name" : "exif",
-  "version" : "0.6.0",
-  "description" : "A node.js library to extract Exif metadata from images.",
-  "author" : [ "Daniel Leinich <leinich@gmx.net>", "Olivier Oeuillot <olivier.oeuillot@gmail.com>" ],
-  "keywords" : ["exif", "image", "jpeg", "jpg", "makernotes", "gps"],
-  "main" : "./lib/exif",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/gomfunkel/node-exif.git"
+  "name": "node-exif",
+  "version": "0.7.0",
+  "description": "A node.js library to extract Exif metadata from images.",
+  "author" : "Daniel Leinich <leinich@gmx.net>",
+  "contributors": [
+    "Olivier Oeuillot <olivier.oeuillot@gmail.com>",
+    "Ruurd Bijlsma <ruurd@bijlsma.dev>"
+  ],
+  "type": "module",
+  "keywords": [
+    "exif",
+    "image",
+    "jpeg",
+    "jpg",
+    "makernotes",
+    "gps"
+  ],
+  "main": "./src/ExifImage.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gomfunkel/node-exif.git"
   },
   "dependencies": {
     "debug": "^2.2"
   },
   "devDependencies": {
-    "mocha": "^2.4"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec test/*-test.js"
+    "test-debug": "set DEBUG=* && mocha --reporter spec test/*-test.js",
+    "test": "mocha --reporter spec test/*-test.js"
   }
 }
